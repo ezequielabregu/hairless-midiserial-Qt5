@@ -1,4 +1,4 @@
-# Hairless MIDI<->Serial Bridge 
+# Hairless MIDI<->Serial Bridge
 
 is the easiest way to connect serial devices (like Arduinos) to send and receive MIDI signals.
 
@@ -10,18 +10,18 @@ Please see that page for information on running and using Hairless Midiserial, a
 
 ---
 
-**IMPORTANT:** This repository has been **updated** to work with Qt 5. 
+**IMPORTANT:** This repository has been **updated** to work with Qt 5.
 
 ---
 
-The original code was written for Qt 4, and the changes made were necessary to ensure compatibility with modern macOS systems.
+The original code was written for Qt 4, and the changes made were necessary to ensure compatibility with modern Qt 5.
 The changes were necessary to adapt the Hairless MIDI<->Serial Bridge codebase, originally written for Qt 4, to work with Qt 5 on modern macOS systems. Qt 5 introduced significant changes, such as moving `QApplication` to the `QtWidgets` module and deprecating methods like `QString::fromAscii`, which required replacing them with `QString::fromLatin1`. Additionally, we updated the `.pro` file to include the `widgets` module and used the `CONFIG+=sdk_no_version_check` flag to bypass warnings about unsupported macOS SDK versions.
 
 These updates ensured compatibility with Qt 5 while maintaining the functionality of the original application. Setting the correct PATH for Qt 5 and cleaning the build directory were also crucial steps to ensure a smooth compilation process.
 
 ---
 
-## If you want to build the project from original source, please follow these instructions:
+## If you want to build the project from original source, please follow these instructions
 
 This section provides a step-by-step guide to compile the Hairless MIDI<->Serial Bridge from source on macOS with an M1 chip or similar architecture.
 
@@ -120,7 +120,7 @@ make
 
 After compilation, the executable should be in the build directory. Run it.
 
-# Building Hairless Bridge from source (ORIGINAL README)
+## Building Hairless Bridge from source (Original README.md)
 
 (Note again, prebuilt versions *are available for download* at the above URL.)
 
@@ -134,7 +134,7 @@ On Windows I recommend building with the [MingGW compiler](http://www.mingw.org/
 
 (For the Windows release builds I actually [cross-build under Linux using wine, as described here](http://projectgus.com/2011/09/developing-qt-apps-for-windows-using-linux-wine/).)
 
-# Libraries
+## Libraries
 
 - [qextserialport](https://code.google.com/p/qextserialport/) is hosted on Github and is linked into the source tree as a git submodule.
 
@@ -142,6 +142,6 @@ On Windows I recommend building with the [MingGW compiler](http://www.mingw.org/
 
 Both libraries are small so they compiled as source files directly into Hairless Bridge, not linked as libraries.
 
-# Release builds
+## Release builds
 
 The official releases are static linked, so they've actually been built against Qt versions that were compiled from source, configured with `-static` for static linking.
